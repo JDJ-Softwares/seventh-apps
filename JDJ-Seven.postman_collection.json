@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "b864e9d5-da63-4a92-8941-c0a63b617096",
+		"name": "JDJ-Seven",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Buscar Menu",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/jdjseven/v1/general/menu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jdjseven",
+						"v1",
+						"general",
+						"menu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar pedidos usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/jdjseven/v1/general/pedido/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jdjseven",
+						"v1",
+						"general",
+						"pedido",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fazer pedido",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"valor\": 10,\n\t\"entrega\": false,\n\t\"retirada\": true,\n\t\"dinheiro\": false,\n\t\"cartao\": true,\n\t\"concluido\": false,\n\t\"usuario\": {\n\t\t\n\t},\n\t\"produtos\": [\n\t\t{}\n\t\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/jdjseven/v1/general/pedido",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jdjseven",
+						"v1",
+						"general",
+						"pedido"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar pedidos por data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/jdjseven/v1/general/pedido/when/2020-04-06",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jdjseven",
+						"v1",
+						"general",
+						"pedido",
+						"when",
+						"2020-04-06"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar produtos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/jdjseven/v1/general/produto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jdjseven",
+						"v1",
+						"general",
+						"produto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inserir produto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"Seca barriga\",\n\t\"descricao\": \"Uma bebida composta de colágeno, proteina e chá's\",\n\t\"imagem\":\"\",\n\t\"background\": \"\",\n\t\"preco\": 25.50,\n\t\"ingredientes\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/jdjseven/v1/general/produto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jdjseven",
+						"v1",
+						"general",
+						"produto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inserir usuario",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"credential\": {\n        \"email\": \"raphaella@hotmailcom\",\n        \"password\": \"raphaella\"\n    },\n    \"usuario\": {\n        \"nome\": \"Raphaela\",\n        \"email\": \"raphaella@hotmailcom\",\n        \"telefone\": \"21975878250\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/seven/usuario/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"seven",
+						"usuario",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
